@@ -1,0 +1,19 @@
+<ion-view view-title="Pokémons">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="pokemon in pokemons" type="item-text-wrap" href="#/tab/pokemons/{{pokemon.id}}">
+                <img class="no-radius" ng-src="{{pokemon.face}}">
+                <h2>{{pokemon.number}} - {{pokemon.name}}</h2>
+                <p style="float: right">{{pokemon.count}}</p>
+
+                <i class="icon ion-chevron-right icon-accessory"></i>
+                <ion-option-button class="button-negative" ng-click="less(pokemon)">
+                    <i class="icon ion-ios-minus"></i>
+                </ion-option-button>
+                <ion-option-button class="button-positive" ng-click="add(pokemon)">
+                    <i class="icon ion-ios-plus"></i>
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
